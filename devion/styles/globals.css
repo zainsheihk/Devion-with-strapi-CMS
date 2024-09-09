@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .underline-custom {
+        @apply relative no-underline cursor-pointer;
+    }
+
+    .underline-custom::after {
+        content: "";
+        /* background: --var(primary-color); */
+        @apply absolute left-0 bottom-[-3px] w-full bg-primary-color h-[1px] pt-[1px] transform origin-right scale-x-0 transition-transform duration-300 ease-in;
+    }
+
+    .underline-custom:hover::after,
+    .underline-custom:focus::after {
+        @apply transform origin-left scale-x-100;
+    }
+}
+
+@layer components {
+    @layer responsive {
+
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        /* Hide scrollbar for IE, Edge, and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    }
+}
+
+.container {
+    max-width: 1024px;
+    width: 80%;
+}
