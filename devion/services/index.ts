@@ -24,6 +24,7 @@ export async function getConfiguration(): Promise<{
   const response = await fetch(url.href, {
     method: "GET",
     credentials: "include",
+    cache: "no-cache",
     headers: {
       "Content-Type": "application/json",
     },
@@ -63,6 +64,7 @@ export async function getLandingPage(): Promise<{
   const response = await fetch(url.href, {
     method: "GET",
     credentials: "include",
+    cache: "no-cache",
     headers: {
       "Content-Type": "application/json",
     },
