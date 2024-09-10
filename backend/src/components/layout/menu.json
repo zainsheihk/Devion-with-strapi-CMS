@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_menus",
+  "info": {
+    "displayName": "Menu",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "menu_item": {
+      "type": "string"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "item_type": {
+      "type": "string"
+    }
+  }
+}

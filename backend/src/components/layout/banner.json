@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_layout_banners",
+  "info": {
+    "displayName": "Banner",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "banner_image_1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "banner_image_2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "button_text_1": {
+      "type": "string"
+    },
+    "button_URL_1": {
+      "type": "string"
+    },
+    "button_text_2": {
+      "type": "string"
+    },
+    "button_URL_2": {
+      "type": "string"
+    }
+  }
+}
