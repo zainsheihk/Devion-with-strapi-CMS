@@ -19,11 +19,13 @@ export interface LayoutMenu extends Schema.Component {
   info: {
     displayName: 'Menu';
     icon: 'apps';
+    description: '';
   };
   attributes: {
     menu_item: Attribute.String;
     meta_title: Attribute.String;
-    item_type: Attribute.String;
+    item_type: Attribute.Enumeration<['link', 'button']> &
+      Attribute.DefaultTo<'link'>;
   };
 }
 

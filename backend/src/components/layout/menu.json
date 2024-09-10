@@ -2,7 +2,8 @@
   "collectionName": "components_layout_menus",
   "info": {
     "displayName": "Menu",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,7 +14,12 @@
       "type": "string"
     },
     "item_type": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "link",
+        "button"
+      ],
+      "default": "link"
     }
   }
 }

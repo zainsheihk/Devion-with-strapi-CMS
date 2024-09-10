@@ -368,6 +368,7 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
     singularName: 'configuration';
     pluralName: 'configurations';
     displayName: 'configuration';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -375,6 +376,7 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
   attributes: {
     logo_url: Attribute.String;
     logo: Attribute.Media<'images'>;
+    menu: Attribute.Component<'layout.menu', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -405,9 +407,8 @@ export interface ApiLandingPageLandingPage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    Banner: Attribute.Component<'layout.banner', true>;
+    Banner: Attribute.Component<'layout.banner'>;
     SEO: Attribute.Component<'seo.seo-meta'>;
-    Menu: Attribute.Component<'layout.menu', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

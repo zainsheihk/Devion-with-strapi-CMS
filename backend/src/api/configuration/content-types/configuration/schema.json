@@ -4,7 +4,8 @@
   "info": {
     "singularName": "configuration",
     "pluralName": "configurations",
-    "displayName": "configuration"
+    "displayName": "configuration",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,11 +16,17 @@
       "type": "string"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "menu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.menu"
     }
   }
 }
