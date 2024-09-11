@@ -21,6 +21,26 @@
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-meta"
+    },
+    "video_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.video-section"
+    },
+    "work_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.work-section"
+    },
+    "number_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.number-section"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.testimonials"
     }
   }
 }

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_cards",
+  "info": {
+    "displayName": "Card",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

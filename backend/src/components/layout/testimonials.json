@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_testimonials",
+  "info": {
+    "displayName": "Testimonials",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "testimonial": {
+      "type": "text"
+    },
+    "designation": {
+      "type": "string"
+    }
+  }
+}

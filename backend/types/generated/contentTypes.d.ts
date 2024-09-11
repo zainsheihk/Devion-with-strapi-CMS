@@ -409,6 +409,10 @@ export interface ApiLandingPageLandingPage extends Schema.SingleType {
   attributes: {
     Banner: Attribute.Component<'layout.banner'>;
     SEO: Attribute.Component<'seo.seo-meta'>;
+    video_section: Attribute.Component<'layout.video-section'>;
+    work_section: Attribute.Component<'layout.work-section'>;
+    number_section: Attribute.Component<'layout.number-section'>;
+    testimonials: Attribute.Component<'layout.testimonials', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
