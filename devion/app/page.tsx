@@ -9,13 +9,14 @@ export default async function Home() {
   const {
     data: { attributes },
   } = await getLandingPage();
+
   return (
     <>
       <Hero banner={attributes.Banner} />
-      <VideoSection />
-      <AvailabilitySection />
-      <ValuesSection />
-      <TestimonialsSection />
+      <VideoSection data={attributes.video_section} />
+      <AvailabilitySection data={attributes.work_section} />
+      <ValuesSection data={attributes.number_section} />
+      <TestimonialsSection data={attributes.testimonials} />
     </>
   );
 }

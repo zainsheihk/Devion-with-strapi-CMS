@@ -7,7 +7,7 @@ function TestimonialSlide({
   description,
   company,
 }: {
-  image: StaticImageData;
+  image: string;
   name: string;
   description: string;
   company: string;
@@ -16,6 +16,8 @@ function TestimonialSlide({
     <div className="py-16 px-24 mt-14 rounded-[250px] border-2 border-primary-color flex justify-between items-start bg-white">
       <div className="w-[40%]  ">
         <Image
+          width={800}
+          height={800}
           src={image}
           alt=""
           className="absolute left-0 bottom-0 max-w-[350px]"

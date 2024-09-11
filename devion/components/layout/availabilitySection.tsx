@@ -6,7 +6,10 @@ import shape2 from "@public/shape2.png";
 import vector1 from "@public/availability-vector-1.png";
 import vector2 from "@public/availability-vector-2.png";
 
-function AvailabilitySection() {
+function AvailabilitySection({ data }: { data: any }) {
+  const heading = data.heading.map((item: any) =>
+    item.children.map((ele: any) => ele.text)
+  );
   return (
     <section className="py-8 ">
       <div className="container m-auto bg-[#F3EBFF] rounded-[36px] py-24 relative overflow-hidden">
@@ -31,16 +34,21 @@ function AvailabilitySection() {
           className="absolute bottom-0 right-10 w-[25%] select-none"
         />
         <div>
-          <h5 className="text-primary-text-color text-[36px] max-w-[400px] font-bold  m-auto leading-[1.4]">
-            Work with who you want, when you want. Use Dental Jobs anytime,
-            anywhere, and on any device.
-          </h5>
+          {heading.map((ele: any, index: any) => (
+            <h5
+              key={index}
+              className="text-primary-text-color text-[36px] max-w-[400px] font-bold  m-auto leading-[1.4]"
+            >
+              {ele}
+            </h5>
+          ))}
+
           <div className="flex justify-center items-center gap-4 mt-10">
             <ButtonDefault buttonType="secondary" className="rounded-md">
-              Looking for Work?
+              {data.button_text_1}
             </ButtonDefault>
             <ButtonDefault buttonType="secondary" className="rounded-md">
-              Looking for Hire?
+              {data.button_text_2}
             </ButtonDefault>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { handleResponse } from "@utils/api-helper";
 import QueryString from "qs";
 
 const SERVER_ENDPOINT =
-  process.env.SERVER_ENDPOINT || process.env.NEXT_PUBLIC_API_URL;
+  process.env.NEXT_PUBLIC_SERVER_ENDPOINT || process.env.NEXT_PUBLIC_API_URL;
 
 export async function getConfiguration(): Promise<{
   status: string;
@@ -49,6 +49,41 @@ export async function getLandingPage(): Promise<{
             fields: ["url", "alternativeText"],
           },
           banner_image_2: {
+            fields: ["url", "alternativeText"],
+          },
+        },
+      },
+      video_section: {
+        fields: "*",
+        populate: {
+          image: {
+            fields: ["url", "alternativeText"],
+          },
+        },
+      },
+      work_section: {
+        fields: "*",
+      },
+      number_section: {
+        fields: "*",
+        populate: {
+          image: {
+            fields: ["url", "alternativeText"],
+          },
+          card: {
+            fields: "*",
+            populate: {
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+        },
+      },
+      testimonials: {
+        fields: "*",
+        populate: {
+          image: {
             fields: ["url", "alternativeText"],
           },
         },
