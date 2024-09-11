@@ -6,11 +6,7 @@ import Navbar from "./navbar";
 import { getConfiguration } from "@services/index";
 import { imageSourceWithBaseURL } from "@utils/index";
 
-async function Header() {
-  const {
-    data: { attributes },
-  } = await getConfiguration();
-
+function Header({ attributes }: { attributes: any }) {
   return (
     <header className="bg-white">
       <div className="container mx-auto flex justify-between items-center py-6 ">

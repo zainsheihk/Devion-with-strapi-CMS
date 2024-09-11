@@ -16,6 +16,9 @@ export async function getConfiguration(): Promise<{
       menu: {
         fields: "*",
       },
+      social_media: {
+        fields: "*",
+      },
     },
   });
 

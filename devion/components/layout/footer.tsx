@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "@public/footer-logo.png";
+// import footerLogo from "@public/footer-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import SocialIcon from "@components/socialIcon";
@@ -10,8 +10,13 @@ import ButtonDefault from "@components/buttons/button";
 import BottomBar from "./bottomBar";
 import footerVector2 from "@public/footer-vector.png";
 import footerVector1 from "@public/footer-vector-2.png";
+import { imageSourceWithBaseURL } from "@utils/index";
 
-function Footer() {
+function Footer({ attributes }: { attributes: any }) {
+  const socialMedia: any = {
+    facebook: <SocialIcon name="facebook" />,
+    linkedin: <SocialIcon name="linkedin" />,
+  };
   return (
     <div className="">
       <footer className="bg-footer-shape bg-[length:100%_100%] pb-3 pt-20  z-10 relative  ">
@@ -26,9 +31,15 @@ function Footer() {
           alt=""
         />
         <div className="flex justify-center items-center flex-col mb-5">
-          <Image src={footerLogo} alt="" className="max-w-[220px] mb-4" />
+          <Image
+            width={220}
+            height={150}
+            src={imageSourceWithBaseURL(attributes.logo.data.attributes.url)}
+            alt=""
+            className="max-w-[220px] mb-4"
+          />
           <p className="text-white text-center max-w-[250px] text-[18px]">
-            One Washington Mall, Suite 1269 Boston, MA 02108
+            {attributes.address}
           </p>
         </div>
         <div className="container m-auto flex justify-center items-start mt-16 gap-5">
@@ -63,8 +74,11 @@ function Footer() {
               </li>
             </ul>
             <div className="flex justify-start gap-6 mt-8">
-              <SocialIcon name="linkedin" />
-              <SocialIcon name="facebook" />
+              {attributes.social_media.map((ele: any) => (
+                <React.Fragment key={ele.id}>
+                  {socialMedia[ele.type]}
+                </React.Fragment>
+              ))}
             </div>
           </div>
           <div className="w-1/4">
@@ -126,7 +140,7 @@ function Footer() {
                   className="text-white text-[16px] font-[300] mb-3 flex items-center gap-2"
                 >
                   <FontAwesomeIcon icon={faEnvelope} className=" w-3" />{" "}
-                  service@dentaljobs.com
+                  {attributes.email}
                 </Link>
               </li>
 
@@ -140,8 +154,8 @@ function Footer() {
                   href={""}
                   className="text-white text-[15px] font-[300] mb-3 flex items-center gap-2"
                 >
-                  <FontAwesomeIcon icon={faPhone} className=" w-3" /> (844)
-                  643-3128
+                  <FontAwesomeIcon icon={faPhone} className=" w-3" />{" "}
+                  {attributes.phone}
                 </Link>
               </li>
             </ul>
