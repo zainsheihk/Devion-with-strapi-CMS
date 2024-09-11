@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_social_medias",
+  "info": {
+    "displayName": "social media",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "facebook",
+        "linkedin",
+        "twitter"
+      ]
+    }
+  }
+}

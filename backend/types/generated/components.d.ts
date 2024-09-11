@@ -56,6 +56,18 @@ export interface LayoutTestimonials extends Schema.Component {
   };
 }
 
+export interface LayoutSocialMedia extends Schema.Component {
+  collectionName: 'components_layout_social_medias';
+  info: {
+    displayName: 'social media';
+    icon: 'alien';
+  };
+  attributes: {
+    link: Attribute.String;
+    type: Attribute.Enumeration<['facebook', 'linkedin', 'twitter']>;
+  };
+}
+
 export interface LayoutNumberSection extends Schema.Component {
   collectionName: 'components_layout_number_sections';
   info: {
@@ -122,6 +134,7 @@ declare module '@strapi/types' {
       'layout.work-section': LayoutWorkSection;
       'layout.video-section': LayoutVideoSection;
       'layout.testimonials': LayoutTestimonials;
+      'layout.social-media': LayoutSocialMedia;
       'layout.number-section': LayoutNumberSection;
       'layout.menu': LayoutMenu;
       'layout.card': LayoutCard;

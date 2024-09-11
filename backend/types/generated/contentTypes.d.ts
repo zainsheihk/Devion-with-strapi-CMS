@@ -377,6 +377,10 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
     logo_url: Attribute.String;
     logo: Attribute.Media<'images'>;
     menu: Attribute.Component<'layout.menu', true>;
+    address: Attribute.String;
+    phone: Attribute.String;
+    email: Attribute.String;
+    social_media: Attribute.Component<'layout.social-media', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

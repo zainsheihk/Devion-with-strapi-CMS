@@ -27,6 +27,20 @@
       "type": "component",
       "repeatable": true,
       "component": "layout.menu"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "social_media": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.social-media"
     }
   }
 }
