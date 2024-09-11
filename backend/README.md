@@ -1,5 +1,5 @@
 ## Live Demo
-The web page is live at: [https://devion-with-strapi-cms-production.up.railway.app/admin](https://devion-with-strapi-cms-production.up.railway.app/admin)
+The web page is live at: [https://devion-with-strapi-cms.vercel.app/](https://devion-with-strapi-cms.vercel.app/)
 
 
 # 🚀 Getting started with Strapi
